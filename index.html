@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Word Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('game')">Game</button>
+    <button onclick="showPage('about')">About</button>
+  </nav>
+
+  <!-- Home Page -->
+  <div class="card" id="homePage">
+    <h1>Welcome to the Word Game!</h1>
+    <p>Test your brain with this fun word guessing challenge.</p>
+    <p>Play, Learn, Enjoy - one letter at a time!</p>
+    <button onclick="showPage('game')">Start Game</button>
+  </div>
+
+  <!-- Game Page -->
+  <div class="card hidden" id="gamePage">
+    <h1>Guess the Word</h1>
+    <p><b>Hint:</b> It's a programming language</p>
+    <div id="displayWord"></div>
+    <input type="text" id="letter" maxlength="1" />
+    <br />
+    <button onclick="guess()">Submit</button>
+    <button onclick="startGame()">Restart</button>
+    <p id="feedback"></p>
+  </div>
+
+  <!-- About Page -->
+  <div class="card hidden" id="aboutPage">
+    <h1>About This Game</h1>
+    <p>This mini project was built by <b>santhiyasri</b> to learn and explore web development skills.</p>
+    <p>It uses <b>HTML, CSS, and JavaScript</b> to build an interactive and fun experience.</p>
+    <p>Designed with creativity, made with effort.</p>
+      </div>
+
+  <!-- Congratulations Page -->
+  <div class="card hidden" id="congratsPage">
+    <h1>Congratulations!</h1>
+    <p>You guessed the word correctly!</p>
+    <p>Wanna try again and break your record?</p>
+    <button onclick="showPage('game')">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

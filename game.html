@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Word Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="game.html">Game</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="card">
+    <h1>Guess the Word</h1>
+    <p><b>Hint:</b> It's a programming language</p>
+    <div id="displayWord"></div>
+    <input type="text" id="letter" maxlength="1" />
+    <br />
+    <button onclick="guess()">Submit</button>
+    <button onclick="startGame()">Restart</button>
+    <p id="feedback"></p>
+    <div id="congrats" class="hidden">
+      <h2>Congratulations!</h2>
+      <p>You guessed the word correctly!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
